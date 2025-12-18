@@ -1,0 +1,32 @@
+https://www.codechef.com/problems/MAKEAP7
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n ; 
+	    cin>>n;
+	    vector<int> a(n);
+	    for(int i = 0 ; i < n ; i++){
+	        cin>>a[i];
+	    }
+	    int ap =0;
+	    for(int i = 1 ; i < n ; i++){
+	        int r = a[i] - a[i-1];
+	        ap = gcd(ap , r);
+	    }
+	    long long res = 0 ;
+	    for(int i = 1 ; i < n ; i++){
+	        int s = a[i] - a[i-1];
+	        res+=( s/ap  - 1);
+	    }
+	    cout<<res<<endl;
+	}
+
+}
