@@ -1,0 +1,12 @@
+https://www.codechef.com/problems/TOYS
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	// your code goes here
+	int n,m;
+	cin>>n>>m;
+	int r = n - m;
+	if(r<=0) cout<<"0\n";
+	else cout<<r<<endl;
+}
