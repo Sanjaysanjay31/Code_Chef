@@ -1,0 +1,29 @@
+https://www.codechef.com/problems/ADDPOS
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int s=0 , v;
+	    for(int i = 0 ; i < n ; i++){
+	        cin>>v;
+	        s+=v;
+	    }
+	    if(s >= 0 ) cout<<"0"<<endl;
+	    else{
+	        int res;
+	        if(s%n==0) res = s/n;
+	        else res = abs(s/n) + 1;
+	        cout<<abs(res)<<endl;
+	        
+	    }
+	}
+
+}
